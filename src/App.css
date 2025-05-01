@@ -1,0 +1,80 @@
+/** @format */
+
+.App {
+  min-height: 100vh;
+  padding-top: 70px; /* Space for fixed navbar */
+}
+
+.card {
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Rating filter styles */
+.rating-slider {
+  height: 8px;
+  cursor: pointer;
+}
+
+.rating-slider::-webkit-slider-thumb {
+  height: 18px;
+  width: 18px;
+  border-radius: 50%;
+  background: #ffc107;
+  cursor: pointer;
+  -webkit-appearance: none;
+  margin-top: -5px;
+  border: 2px solid #fff;
+  box-shadow: 0 0 2px rgba(0, 0, 0, 0.3);
+}
+
+.rating-slider::-moz-range-thumb {
+  height: 18px;
+  width: 18px;
+  border-radius: 50%;
+  background: #ffc107;
+  cursor: pointer;
+  border: 2px solid #fff;
+  box-shadow: 0 0 2px rgba(0, 0, 0, 0.3);
+}
+
+.rating-slider::-webkit-slider-runnable-track {
+  height: 8px;
+  border-radius: 4px;
+  background: linear-gradient(to right, #dc3545, #ffc107, #28a745);
+}
+
+.rating-slider::-moz-range-track {
+  height: 8px;
+  border-radius: 4px;
+  background: linear-gradient(to right, #dc3545, #ffc107, #28a745);
+}
+
+/* Theme-specific styles */
+[data-bs-theme="light"] .App {
+  background-color: #f8f9fa;
+}
+
+[data-bs-theme="dark"] .App {
+  background-color: #212529;
+}
+
+[data-bs-theme="dark"] .card {
+  border-color: #495057;
+}
+
+[data-bs-theme="dark"] .card:hover {
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+[data-bs-theme="dark"] .rating-slider::-webkit-slider-thumb {
+  border-color: #343a40;
+}
+
+[data-bs-theme="dark"] .rating-slider::-moz-range-thumb {
+  border-color: #343a40;
+}
